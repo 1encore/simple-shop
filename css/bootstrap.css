@@ -5,6 +5,8 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -1130,7 +1132,8 @@ img {
 .img-thumbnail {
   display: inline-block;
   max-width: 100%;
-  height: auto;
+  height: 160px;
+  width: 100%;
   padding: 4px;
   line-height: 1.42857143;
   background-color: #fff;

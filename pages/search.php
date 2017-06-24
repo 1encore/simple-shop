@@ -12,7 +12,7 @@
 <div class="row">
     <div class="col-lg-12">
       <center>
-        <div class="form-group" style="width: 500px">
+        <div class="form-group">
           <center>
             <form action="?page=search&act=search" method="post">
               <input name="name" type="text" class="form-control" placeholder="Название товара (Air Jordan, Mercurial и. т. д.)"><br>
@@ -45,6 +45,8 @@
       </center>
       <hr>
     </div>
+</div>
+<div class="row">
     <div class="col-md-6">
 <?php
     if(isset($_GET['act'])){
@@ -82,7 +84,7 @@
 ?>
       <div class="col-md-4 col-sm-6">
           <a href="?page=item&id=<?php echo $row->id?>">
-              <img class="img-responsive img-portfolio img-hover" src="img/<?php echo $row_img->url?>" alt="img_item">
+              <img class="img-responsive img-portfolio img-hover img-thumbnail" src="img/<?php echo $row_img->url?>" alt="img_item">
               <center><?php echo $row->name?></center>
           </a>
       </div>
@@ -99,7 +101,7 @@
   ?>
       <div class="col-md-4 col-sm-6">
           <a href="?page=item&id=<?php echo $row->id?>">
-              <img class="img-responsive img-portfolio img-hover" src="img/<?php echo $row_img->url?>" alt="img_item">
+              <img class="img-responsive img-hover img-thumbnail" src="img/<?php echo $row_img->url?>" alt="img_item">
           </a>
       </div>
   <?php

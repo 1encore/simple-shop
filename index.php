@@ -12,7 +12,7 @@
     <title>MyStore</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
@@ -70,7 +70,7 @@
           }else if($_GET['action']=="add"){
             $id = $_GET['id'];
             array_push($_SESSION['box'], $id);
-            header("Location:index.php?page=item&id=".$id."");
+            header("Location:index.php?page=item&id=".$id);
           }else if($_GET['action']=="delBox"){
             $id = $_GET['id'];
             array_splice($_SESSION['box'], $id, 1);

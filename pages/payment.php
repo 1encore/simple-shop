@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Оплата</h1>
+        <h1 class="page-header">Корзина</h1>
 		</div>
 </div>
 <?php
@@ -16,26 +16,26 @@
     </thead>
     <tbody>
 <?php
-      $count = 0;
       $sum = 0;
-      $item_box = $_SESSION['box'][$count];
-	    $query = $connection->query("SELECT * FROM items WHERE id = $item_box");
-	    while($row = $query->fetch_object()){
-?>
-      <tr>
-        <td><?php echo $row->name?></td>
-        <td><?php echo $row->price?></td>
-        <td><a href="?action=delBox&id=<?php echo $count?>" class="btn btn-danger">удалить</a></td>
-      </tr>
-<?php
-					$count++;
-					$sum+=$row->price;
-	    }
+      $item_box = $_SESSION['box'];
+      for($i = 0; $i<count($item_box); $i++){
+  	    $query = $connection->query("SELECT * FROM items WHERE id = $item_box[$i]");
+  	    if($row = $query->fetch_object()){
+  ?>
+        <tr>
+          <td><?php echo $row->name?></td>
+          <td><?php echo $row->price?>KZT</td>
+          <td><a href="?action=delBox&id=<?php echo $i?>" class="btn btn-danger">удалить</a></td>
+        </tr>
+  <?php
+  					$sum+=$row->price;
+  	    }
+      }
 ?>
 			<tr>
-				<td>Общая сумма:</td>
+				<th>Общая сумма:</td>
 				<td></td>
-				<td><?php echo $sum;?>KZT</td>
+				<th><?php echo $sum;?>KZT</td>
 			</tr>
     </tbody>
   </table>

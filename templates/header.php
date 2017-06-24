@@ -17,7 +17,7 @@
                     <a href="?page=search">Товары</a>
                 </li>
                 <li>
-                    <a href="?page=box">Корзина</a>
+                    <a href="?page=payment">Корзина</a>
                 </li>
                     <?php
                     if(isset($_SESSION['online'])&&isset($_SESSION['id'])){
