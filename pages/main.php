@@ -11,7 +11,7 @@
       $query_img = $connection->query("SELECT * FROM pictures WHERE item_id = $row->id");
       if($row_img = $query_img->fetch_object()){
         $count++;
-        if($count==6){
+        if($count==7){
             break;
         }
 ?>

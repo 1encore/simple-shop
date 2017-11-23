@@ -52,7 +52,7 @@
 ?>
     <div class="col-sm-3 col-xs-6">
         <a href="?page=item&id=<?php echo $row_rec->id?>">
-            <img class="img-responsive img-hover img-related" src="img/<?php echo $row_rec_img->url ?>" alt="">
+            <img style="width: 250px; height: 250px" class="img-responsive img-hover img-related" src="img/<?php echo $row_rec_img->url ?>" alt="">
         </a>
     </div>
 <?php

@@ -47,7 +47,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" style="margin-left: 25%;">
 <?php
     if(isset($_GET['act'])){
       $name = $_POST['name'];
